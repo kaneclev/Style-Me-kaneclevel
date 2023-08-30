@@ -52,6 +52,12 @@ build CMakeFiles/MGM1_Style_Me_kaneclev.dir/main.cpp.o: CXX_COMPILER__MGM1_Style
   OBJECT_DIR = CMakeFiles/MGM1_Style_Me_kaneclev.dir
   OBJECT_FILE_DIR = CMakeFiles/MGM1_Style_Me_kaneclev.dir
 
+build CMakeFiles/MGM1_Style_Me_kaneclev.dir/fahrenheit2celsius.cpp.o: CXX_COMPILER__MGM1_Style_Me_kaneclev_Debug /Users/kanecleveland/Desktop/CS2300/MGM1-Style-Me-kaneclev/fahrenheit2celsius.cpp || cmake_object_order_depends_target_MGM1_Style_Me_kaneclev
+  DEP_FILE = CMakeFiles/MGM1_Style_Me_kaneclev.dir/fahrenheit2celsius.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/MGM1_Style_Me_kaneclev.dir
+  OBJECT_FILE_DIR = CMakeFiles/MGM1_Style_Me_kaneclev.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MGM1_Style_Me_kaneclev
@@ -60,7 +66,7 @@ build CMakeFiles/MGM1_Style_Me_kaneclev.dir/main.cpp.o: CXX_COMPILER__MGM1_Style
 #############################################
 # Link the executable MGM1_Style_Me_kaneclev
 
-build MGM1_Style_Me_kaneclev: CXX_EXECUTABLE_LINKER__MGM1_Style_Me_kaneclev_Debug CMakeFiles/MGM1_Style_Me_kaneclev.dir/main.cpp.o
+build MGM1_Style_Me_kaneclev: CXX_EXECUTABLE_LINKER__MGM1_Style_Me_kaneclev_Debug CMakeFiles/MGM1_Style_Me_kaneclev.dir/main.cpp.o CMakeFiles/MGM1_Style_Me_kaneclev.dir/fahrenheit2celsius.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3
   OBJECT_DIR = CMakeFiles/MGM1_Style_Me_kaneclev.dir
   POST_BUILD = :
