@@ -12,6 +12,7 @@ int main() {
     double fahrenheit;
     string a;
 
+
     while (!(cin >> choice)) {
         cin.clear();
         string junk;
@@ -21,7 +22,7 @@ int main() {
     while (!(cin >> t)) {
         cin.clear();
         string junk;
-        getline(cin, junk);
+        double givenTemp = getline(cin, junk);
     }
     // Confusing ternary operation that clouds the purpose of the program.
     //
@@ -37,7 +38,8 @@ int main() {
         return 0;
     }
     if (choice == 0) {
-        celsius = temp::calculateCelsius(t);
+        temperature::setFahrenheit()
+        celsius = temperature::getCelsius(t);
         if (celsius < 0)
             a = "cold";
         else if (celsius > 30)

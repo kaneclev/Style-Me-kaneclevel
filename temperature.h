@@ -5,19 +5,16 @@
 #ifndef MGM1_STYLE_ME_KANECLEV_TEMPERATURE_H
 #define MGM1_STYLE_ME_KANECLEV_TEMPERATURE_H
 #include "main.cpp"
+
 class temperature {
 private:
-    double fahrenheit;
+    double temp;
 public:
     temperature();
-    double getFahrenheit();
-    void setFahrenheit(int degrees);
+    double getTemperature();
+    void setFahrenheit(double degrees);
     double getCelsius();
-    // NOTE: the setCelsius function is unnecessary since getCelsius already returns the Fahrenheit conversion
-    // but we will implement it anyway because it is a part of the original code, EXCEPT we will fix the
-    // temperature conversion, which was not correct.
-    void setCelsius(int degrees);
-
+    void convertCelsiusToFahrenheit(int degrees);
 };
 
 
