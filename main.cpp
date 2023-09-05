@@ -8,8 +8,7 @@ using namespace std;
 int main() {
     // Let's say that choice = 0 means we are calculating Fahrenheit to Celsius
     int choice = 0;
-    double celsius;
-    double fahrenheit;
+    int userTemp;
     string a;
 
 

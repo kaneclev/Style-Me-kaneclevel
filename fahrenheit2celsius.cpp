@@ -15,7 +15,7 @@
      * -> Set variable names to be more descriptive than just 'f'.
      */
 
-    temperature::temperature() : temp(32) { }
+    temperature::temperature() : temp() { }
 
 
 // This method takes in the user's given degrees, and sets the member variable, now named 'temperature',
