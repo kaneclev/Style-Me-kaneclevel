@@ -36,14 +36,14 @@
         return (temperature::temp-32)*(5.0/9);
     }
 
-    // I changed the name of the method (setc) to calculateCelsiusToFahrenheit for more clarity.
+    // I changed the name of the method (setc) to setCelsius for more clarity.
     // Also, I fixed the formula for Celsius to Fahrenheit such that it actually worked.
     void temperature::setCelsius(int c) {
         temperature::temp = (c*(9.0/5.0) + 32);
     }
 
 
-    // Return temperature::temp.
+    // Return temperature::temp back as per request.
     double temperature::getFahrenheit() {
         return temperature::temp;
     }
