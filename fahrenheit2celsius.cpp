@@ -2,6 +2,10 @@
 
     /*
      * Some notes about the changes here:
+     *
+     * This program was NOT cleared of the bugs it had. I did fix the temperature conversion bug
+     *
+     *
      * There seemed to be an unnecessary method in this program, such as setc(). From my understanding,
      * the program is supposed to return if the weather is 'beautiful, hot, or cold' in terms of Celsius;
      * therefore, the need to convert from Celsius back to Fahrenheit in the setc() method seemed useless.
@@ -15,10 +19,10 @@
      * -> Set variable names to be more descriptive than just 'f'.
      */
 
-    temperature::temperature() : temp() { }
+    temperature::temperature() : temp(10.0) {}
 
 
-// This method takes in the user's given degrees, and sets the member variable, now named 'temperature',
+    // This method takes in the user's given degrees, and sets the member variable, now named 'temperature',
     // to the given degrees. This temperature is presumed to be in Fahrenheit.
     void temperature::setFahrenheit(double degrees) {
         temperature::temp = degrees;
@@ -26,19 +30,21 @@
 
     // This method performs a Fahrenheit to Celsius conversion on the member variable 'temperature'
     // and returns the result.
-    double temperature::getCelsius()  {
+    double temperature::getCelsius() const  {
         // The problem here is that since both 5 and 9 were integers, we were doing integer division
         // For precision, we need at least one of these values to be a double so it returns a double
-        return (temperature::temp-32)*(5.0/9);        // NEED TO FIX
+        return (temperature::temp-32)*(5.0/9);
     }
 
     // I changed the name of the method (setc) to calculateCelsiusToFahrenheit for more clarity.
     // Also, I fixed the formula for Celsius to Fahrenheit such that it actually worked.
-    void temperature::convertCelsiusToFahrenheit(int c) {
+    void temperature::setCelsius(int c) {
         temperature::temp = (c*(9.0/5.0) + 32);
     }
 
-    double temperature::getTemperature() {
+
+    // Return temperature::temp.
+    double temperature::getFahrenheit() {
         return temperature::temp;
     }
 

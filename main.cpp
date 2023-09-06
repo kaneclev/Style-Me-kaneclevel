@@ -2,55 +2,43 @@
 #include "temperature.h"
 
 using namespace std;
-
-
-
 int main() {
-    // Let's say that choice = 0 means we are calculating Fahrenheit to Celsius
-    int choice = 0;
+    // Initialize some variables for us to use and create a temperature object
+    int userChoice = 0;
+    string junk;
     int userTemp;
-    string a;
+    temperature TempConversion;
 
-
-    while (!(cin >> choice)) {
+    // Loops to gather user input.
+    while (!(cin >> userChoice)) {
         cin.clear();
-        string junk;
         getline(cin, junk);
     }
-    int t = 0;
-    while (!(cin >> t)) {
+    while (!(cin >> userTemp)) {
         cin.clear();
-        string junk;
-        double givenTemp = getline(cin, junk);
+        getline(cin, junk);
     }
     // Confusing ternary operation that clouds the purpose of the program.
-    //
-    if (choice == 1) {
-        fahrenheit = temperature::calculateFahrenheit(t);
-        if (fahrenheit < 32)
-            a = "cold";
-        else if (fahrenheit > 86)
-            a = "hot";
-        else
-            a = "beautiful";
-        cout << "Hello, " << a << " World!" << endl;
-        return 0;
+    // Changed instead to an actual if statement for clarity.
+    if (userChoice == 1) {
+        TempConversion.setFahrenheit(userTemp);
+    } else {
+        TempConversion.setCelsius(userTemp);
     }
-    if (choice == 0) {
-        temperature::setFahrenheit()
-        celsius = temperature::getCelsius(t);
-        if (celsius < 0)
-            a = "cold";
-        else if (celsius > 30)
-            a = "hot";
-        else
-            a = "beautiful";
-        cout << "Hello, " << a << " World!" << endl;
-        return 0;
+    userTemp = TempConversion.getFahrenheit();
+
+    string weather;
+    if (TempConversion.getCelsius() < 32) {
+        weather = "cold";
     }
-//    if (choice == 1)
-//        mytemp.setf(t);
-//    else
-//        mytemp.setc(t);
+    else if (TempConversion.getCelsius() > 86) {
+        weather = "hot";
+    }
+    else {
+        weather = "beautiful";
+    }
+
+    cout << "Hello, " << weather << " World!" << endl;
+    return 0;
 
 }

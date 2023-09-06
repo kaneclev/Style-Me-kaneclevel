@@ -7,14 +7,13 @@
 #include "main.cpp"
 
 class temperature {
-private:
     double temp;
 public:
     temperature();
-    double getTemperature();
+    static double getFahrenheit();
     void setFahrenheit(double degrees);
-    double getCelsius();
-    void convertCelsiusToFahrenheit(int degrees);
+    double getCelsius() const;
+    void setCelsius(int degrees);
 };
 
 
